@@ -4,7 +4,7 @@ const startButton = document.getElementById('start');
 const gameOverSign = document.getElementById('gameOver');
 
 const boardSize = 10;
-const gameSpeed = 200;
+const gameSpeed = 150;
 const squareTypes = {
     emptySquare: 0,
     snakeSquare: 1,
@@ -82,7 +82,7 @@ const moveSnake = () => {
         snake.push(newSquare);
         if(boardSquares[row][column] === squareTypes.foodSquare) {
             addFood();
-            gameSpeed++
+        
         } else {
             const emptySquare = snake.shift();
             drawSquare(emptySquare, 'emptySquare');
